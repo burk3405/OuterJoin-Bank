@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Bank App
+        Version: 1.0.0
+        Home Page
+
+        Author: Aaron Burkett
+        Date:   9/3/2025
+    
+        Filename: index.html
+     -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="bank-title">OuterJoin Bank</title>
+    <link href="styles.css" rel="stylesheet" />
+    
+    <link rel="icon" type="png" href="altLogo1.png">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo" aria-label="Bank Logo">
+      <a href="index.html" target="_self"> <!-- Update to Actual Website Link once hosted -->
+      <img src="altaltLogo1.png" alt="Bank Logo" />
+    </div>
+
+    <p class="bank-title"><strong>OuterJoin</strong>Bank</p>
+    <nav role="navigation" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#tools">Tools</a></li>
+      </ul>
+  <button id="loginBtn" aria-label="Login">Login</button>
+  <button id="signupBtn" aria-label="Sign Up">Sign Up</button>
+    </nav>
+  </header>
+  <main>
+    <section id="overview" aria-labelledby="overview-title">
+      <article>
+        <h2 id="overview-title">Product Overview</h2>
+        <p>Discover our range of banking products designed for your needs.</p>
+      </article>
+    </section>
+    <section id="rates" aria-labelledby="rates-title">
+      <article>
+        <h2 id="rates-title">Current Rates</h2>
+        <p>Loans, Credit Cards, Savings Accounts</p>
+        <div id="rates-content">
+          <!-- Rates will be loaded dynamically -->
+        </div>
+      </article>
+    </section>
+
+    <section id="tools" aria-labelledby="tools-title">
+      <article>
+        <h2 id="tools-title">Financial Tools</h2>
+        <p>Roth IRA Calculator</p>
+        <div id="calculator">
+          <!-- Calculator widget will be loaded dynamically -->
+        </div>
+      </article>
+    </section>
+
+    <!--
+    <section id="roth" aria-labelledby="roth-title">
+      <article>
+        <h2 id="roth-title">Roth IRA Calculator</h2>
+        <div id="roth-calculator"> -->
+          <!-- Roth IRA Calculator widget will be loaded dynamically --> <!--
+        </div>
+      </article>
+    </section> -->
+  </main>
+  <footer>
+    <nav role="navigation" aria-label="Footer Navigation">
+      <ul class="footer-menu">
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#branches">Branch Locator</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+
+<footer>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/aaronburkettdev" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/burk3405" target="_blank" aria-label="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      </a>
+      <a href="https://instagram.com/planegrids/" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://x.com/PlaneGrids" target="_blank" aria-label="X (Twitter)">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="X (Twitter)" />
+    </div>
+    <p>Copyright &copy; OuterJoin Bank 2025 | All Rights Reserved.</p>
+  </footer>
+
+</html>

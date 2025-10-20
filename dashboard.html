@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Bank App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="dashboard-page">
+  <header>
+    <div class="logo" aria-label="Bank Logo">
+      <img src="altLogo1.png" alt="Bank Logo" />
+    </div>
+    <p class="bank-title"><strong>OuterJoin</strong>Bank</p>
+    <nav role="navigation" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#accounts">Accounts</a></li>
+        <li><a href="#cards">Cards</a></li>
+      </ul>
+      <button id="logoutBtn" aria-label="Logout">Logout</button>
+    </nav>
+  </header>
+  <main>
+    <section id="dashboard" aria-labelledby="dashboard-title">
+      <h2 id="dashboard-title">Welcome, <span id="userName">User</span></h2>
+      <div class="account-summary">
+        <article class="account-block">
+          <h3>Checking Account</h3>
+          <p>Balance: <span id="checkingBalance">$0.00</span></p>
+        </article>
+        <article class="account-block">
+          <h3>Savings Account</h3>
+          <p>Balance: <span id="savingsBalance">$0.00</span></p>
+        </article>
+        <article class="account-block">
+          <h3>Credit Card</h3>
+          <p>Balance: <span id="creditBalance">$0.00</span></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <nav role="navigation" aria-label="Footer Navigation">
+      <ul class="footer-menu">
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#branches">Branch Locator</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

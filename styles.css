@@ -1,0 +1,427 @@
+@charset "utf-8";
+
+/*
+   Bank App Project
+   Index Page
+
+   CSS Stlyes Page
+   
+   Typography and Color Styles for index.html
+   
+   Filename: styles.css
+
+*/
+/* Global Design System */
+:root {
+   --color-primary: #027856;
+   --color-secondary: #f5f7fa;
+   --color-accent: #fdc84b;
+   --color-text: #222;
+   --color-bg: #fff;
+   --color-footer: #e5e8ed;
+   --font-main: 'Segoe UI', Arial, sans-serif;
+   --font-size-base: 1rem;
+   --font-size-lg: 1.25rem;
+   --font-size-sm: 0.95rem;
+   --space-xs: 0.5rem;
+   --space-sm: 1rem;
+   --space-md: 2rem;
+   --space-lg: 3rem;
+   --radius: 0.5rem;
+   --transition: 0.2s ease;
+}
+
+body {
+   font-family: var(--font-main);
+   font-size: var(--font-size-base);
+   color: var(--color-text);
+   background: var(--color-bg);
+   margin: 0;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+header {
+   background: var(--color-primary);
+   color: #fff;
+   padding: var(--space-sm) var(--space-md);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.bank-title {
+   font-size: 1.3rem;
+   font-weight: 500;
+   margin: var(--space-xs) 200;
+}
+
+/* Ensure the bank title (if it's a link) always stays white and never underlined,
+   even after being visited/clicked. Use high specificity to override browser defaults. */
+.bank-title a,
+.bank-title a:link,
+.bank-title a:visited,
+.bank-title a:hover,
+.bank-title a:active,
+.bank-title a:focus {
+   color: #fff !important;
+   text-decoration: none !important;
+}
+
+.logo img {
+   height: 64px;
+   width: auto;
+   margin-bottom: var(--space-xs);
+}
+
+nav[role="navigation"] {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.nav-menu {
+   list-style: none;
+   padding: 0;
+   margin: 0 var(--space-xs) var(--space-xs) 0;
+   display: flex;
+   flex-direction: row;
+   gap: var(--space-sm);
+}
+
+.nav-menu a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+   padding: var(--space-xs) var(--space-sm);
+   border-radius: var(--radius);
+   transition: background var(--transition), color var(--transition);
+}
+.nav-menu a:hover, .nav-menu a:focus {
+   background: var(--color-accent);
+   color: var(--color-primary);
+}
+
+#loginBtn {
+   background: var(--color-accent);
+   color: var(--color-primary);
+   border: none;
+   border-radius: var(--radius);
+   padding: var(--space-xs) var(--space-md);
+   font-size: var(--font-size-base);
+   font-weight: 600;
+   cursor: pointer;
+   margin-top: var(--space-xs);
+   transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+#loginBtn:hover, #loginBtn:focus {
+   background: #fff;
+   color: var(--color-primary);
+   box-shadow: 0 2px 8px rgba(0,95,163,0.1);
+}
+
+main {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-md);
+   padding: var(--space-md) var(--space-sm);
+   background: var(--color-secondary);
+}
+
+section {
+   background: var(--color-bg);
+   border-radius: var(--radius);
+   box-shadow: 0 2px 8px rgba(0,95,163,0.05);
+   padding: var(--space-md);
+   margin-bottom: var(--space-sm);
+}
+
+section h2 {
+   font-size: var(--font-size-lg);
+   margin-top: 0;
+   color: var(--color-primary);
+}
+
+#rates-content, #calculator {
+   margin-top: var(--space-sm);
+}
+
+footer {
+   background: var(--color-footer);
+   color: var(--color-text);
+   padding: var(--space-md) var(--space-sm);
+   text-align: center;
+}
+
+.footer-menu {
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: var(--space-sm);
+   padding: 0;
+   margin-bottom: var(--space-xs);
+}
+.footer-menu a {
+   color: var(--color-primary);
+   text-decoration: none;
+   font-size: var(--font-size-sm);
+   transition: color var(--transition);
+}
+.footer-menu a:hover, .footer-menu a:focus {
+   color: var(--color-accent);
+}
+
+/* Login Page Styles */
+.login-page {
+   background: var(--color-secondary);
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.login-section {
+   background: var(--color-bg);
+   border-radius: var(--radius);
+   box-shadow: 0 2px 16px rgba(2,120,86,0.08);
+   padding: var(--space-lg);
+   max-width: 350px;
+   width: 100%;
+   margin: auto;
+}
+
+#loginForm {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-md);
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-xs);
+}
+
+#loginForm label {
+   font-weight: 500;
+   color: var(--color-primary);
+}
+
+#loginForm input {
+   padding: var(--space-xs);
+   border: 1px solid var(--color-footer);
+   border-radius: var(--radius);
+   font-size: var(--font-size-base);
+   font-family: var(--font-main);
+   outline: none;
+   transition: border var(--transition);
+}
+#loginForm input:focus {
+   border-color: var(--color-primary);
+}
+
+#submitLogin {
+   background: var(--color-primary);
+   color: #fff;
+   border: none;
+   border-radius: var(--radius);
+   padding: var(--space-sm) var(--space-md);
+   font-size: var(--font-size-base);
+   font-weight: 600;
+   cursor: pointer;
+   transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+#submitLogin:hover, #submitLogin:focus {
+   background: var(--color-accent);
+   color: var(--color-primary);
+   box-shadow: 0 2px 8px rgba(2,120,86,0.1);
+}
+
+.error-message {
+   color: #d32f2f;
+   background: #fff3f3;
+   border-radius: var(--radius);
+   padding: var(--space-xs);
+   font-size: var(--font-size-sm);
+   margin-top: -0.5rem;
+   margin-bottom: 0;
+   text-align: center;
+}
+
+/* Dashboard Styles */
+.dashboard-page {
+   background: var(--color-secondary);
+   min-height: 100vh;
+}
+
+.account-summary {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-md);
+   margin-top: var(--space-md);
+}
+
+.account-block {
+   background: var(--color-bg);
+   border-radius: var(--radius);
+   box-shadow: 0 2px 8px rgba(2,120,86,0.07);
+   padding: var(--space-md);
+   flex: 1;
+}
+.account-block h3 {
+   margin-top: 0;
+   color: var(--color-primary);
+}
+.account-block p {
+   font-size: var(--font-size-lg);
+   font-weight: 500;
+   color: var(--color-text);
+}
+
+@media (min-width: 700px) {
+   .account-summary {
+      flex-direction: row;
+   }
+}
+
+/* Responsive Layouts */
+@media (min-width: 600px) {
+   header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+   }
+   nav[role="navigation"] {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+   }
+   .nav-menu {
+      gap: var(--space-md);
+   }
+   main {
+      padding: var(--space-lg) var(--space-md);
+   }
+   section {
+      margin-bottom: var(--space-md);
+   }
+}
+
+@media (min-width: 900px) {
+   main {
+      flex-direction: row;
+      gap: var(--space-lg);
+      padding: var(--space-lg) var(--space-lg);
+   }
+   section {
+      flex: 1;
+      margin-bottom: 0;
+   }
+}
+
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  transform: scale(1.2);
+}
+
+.footer-links img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  border-radius: 0;
+}
+
+.footer-links a:hover img {
+  filter: grayscale(0%);
+}
+
+footer #feedback a {
+  color: inherit;           /* Inherit the footer text color */
+  text-decoration: none;    /* Remove underline */
+  transition: color 0.3s ease;
+}
+
+footer #feedback a:hover {
+  color: #007aff;           /* Optional: add a hover color */
+}
+
+/* Signup Page Styles (reuse login styles) */
+.signup-page {
+   background: var(--color-secondary);
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.success-message {
+   color: #027856;
+   background: #e6fff3;
+   border-radius: var(--radius);
+   padding: var(--space-xs);
+   font-size: var(--font-size-sm);
+   margin-top: -0.5rem;
+   margin-bottom: 0;
+   text-align: center;
+}
+
+#logoutBtn {
+   background: #d32f2f;
+   color: #fff;
+   border: none;
+   border-radius: var(--radius);
+   padding: var(--space-xs) var(--space-md);
+   font-size: var(--font-size-base);
+   font-weight: 600;
+   cursor: pointer;
+   margin-left: var(--space-xs);
+   transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+#logoutBtn:hover, #logoutBtn:focus {
+   background: #fff;
+   color: #d32f2f;
+   box-shadow: 0 2px 8px rgba(211,47,47,0.1);
+}
+
+/* Admin Dashboard Table Styles */
+#adminUserTable {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: var(--space-md);
+   background: var(--color-bg);
+   border-radius: var(--radius);
+   box-shadow: 0 2px 8px rgba(2,120,86,0.07);
+   overflow: hidden;
+}
+#adminUserTable th, #adminUserTable td {
+   padding: var(--space-xs) var(--space-sm);
+   text-align: left;
+   border-bottom: 1px solid var(--color-footer);
+}
+#adminUserTable th {
+   background: var(--color-primary);
+   color: #fff;
+   font-weight: 600;
+}
+#adminUserTable tr:last-child td {
+   border-bottom: none;
+}
+#adminUserTable td {
+   font-size: var(--font-size-base);
+}
