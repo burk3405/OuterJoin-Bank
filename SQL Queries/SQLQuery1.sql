@@ -7,7 +7,7 @@
 -- Database Creation Queries
 
 use Bank;
-
+-- temp
 create table Branch (
 	Branch_ID int identity(1,1) primary key,
 	Branch_Name varchar(100) not null,
@@ -110,3 +110,4 @@ create table Logs (
 	Details varchar(255),
 	foreign key (User_ID) references User_Login(User_ID)
 );
+
