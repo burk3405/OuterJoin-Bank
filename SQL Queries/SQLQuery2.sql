@@ -1,7 +1,7 @@
 -- CSIT 455- Relational/Object Databases
 -- Dr. Shahin Mehdipour Ataee
 -- Term Project- Bank Database
--- Aaron Burkett & Ryan P
+-- Aaron Burkett & Ryan Pontonio
 -- 10/29/2025
 
 -- Database Population Queries
@@ -92,4 +92,5 @@ VALUES
 (1, 'Transfer', 'Transferred $100 from Checking to Savings'),
 (2, 'Loan Payment', 'Auto loan payment processed'),
 (4, 'Approval', 'Approved new savings account for client 3');
+
 
