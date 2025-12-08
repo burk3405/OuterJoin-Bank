@@ -9,41 +9,41 @@
 INSERT INTO Branch (Branch_Name, Address, City, State, Zip_Code)
 VALUES 
 	('Downtown Branch', '100 Main St', 'Buffalo', 'NY', '14201'), -- Branch_ID = 1
-	('Northtowns Branch', '250 North Ave', 'Buffalo', 'NY', '14216'), -- Branch_ID = 2, etc.
+	('Northtowns Branch', '250 North Ave', 'Buffalo', 'NY', '14207'), -- Branch_ID = 2, etc.
 	('Blasdell Branch', '1444 South Park Ave', 'Blasdell', 'NY', '14219'),
 	('Hamburg Branch', '25 Bayview Dr', 'Hamburg', 'NY', '14075'),
-	('Lakeview Branch', '42 Lakeview Blvd', 'Rochester', 'NY', '14607'),
+	('Lakeview Branch', '42 Lakeview Blvd', 'Rochester', 'NY', '14085'),
 	('Fredonia Branch', '280 Central Ave', 'Fredonia', 'NY', '14063'),
 	('Dunkirk Branch', '155 W 2nd St', 'Dunkirk', 'NY', '14063'),
-	('Bank Tower', '1 Tower Dr', 'Buffalo', 'NY', '14444')
+	('Bank Tower', '345 Main St', 'Buffalo', 'NY', '14203')
 	;
 
 INSERT INTO Employee (First_Name, Last_Name, Position, Salary, Hire_Date, Branch_ID)
 VALUES
 ('Anna', 'Gun', 'Manager', 75000, '2019-03-14', 1),
-('Bryan', 'Cranston', 'Cashier', 42000, '2021-06-01', 1),
+('Bryan', 'Cranston', 'Cashier', 39000, '2021-06-01', 1),
 ('Aaron', 'Paul', 'Security', 62000, '2020-09-22', 2),
-('Bob', 'Odenkirk', 'Loan Officer', 62000, '2020-09-22', 2),
-('Dean', 'Norris', 'Manager', 42000, '2021-06-01', 4),
-('Jonathon', 'Banks', 'General Manager', 42000, '2021-06-01', 2),
-('Giancarlo', 'Esposito', 'Human Resources', 42000, '2021-06-01', 8),
-('Levell', 'Crawford', 'Security', 42000, '2021-06-01', 1),
-('David', 'Costabile', 'Loan Officer', 42000, '2021-06-01', 1),
+('Bob', 'Odenkirk', 'Loan Officer', 71000, '2020-09-22', 6),
+('Dean', 'Norris', 'Manager', 65000, '2021-06-01', 4),
+('Jonathon', 'Banks', 'General Manager', 80000, '2021-06-01', 3),
+('Giancarlo', 'Esposito', 'Human Resources', 62000, '2021-06-01', 8),
+('Levell', 'Crawford', 'Security', 49000, '2021-06-01', 5),
+('David', 'Costabile', 'Loan Officer', 47000, '2021-06-01', 7),
 ('Raymond', 'Cruz', 'Intern', 0, '2021-06-01', 8)
 ;
 
 INSERT INTO Client (First_Name, Last_Name, Date_of_Birth, Email, Phone, Address, City, State, Zip_Code, State_License_No, hasChecking, hasSavings, hasLoan, loanType)
 VALUES
-('Sklyer', 'White', '2003-02-17', 'aaronburkett@example.com', '7165558123', '123 Elm St', 'Buffalo', 'NY', '14201', 9876543210, 1, 1, 0, NULL), --Client_ID = 1, etc.
-('Walter', 'White', '1995-07-10', 'emmaw@example.com', '7165552244', '456 Maple Rd', 'Buffalo', 'NY', '14216', 1234567890, 1, 0, 1, 'Auto'),
-('Jesse', 'Pinkman', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Saul', 'Goodman', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Hank', 'Schrader', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Mike', 'Ehrmantraut', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Gustavo', 'Fring', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Huell', 'Babineaux', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Gale', 'Boetticher', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Mortgage'),
-('Tuco', 'Salamanca', '1988-11-05', 'davidk@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 1122334455, 1, 1, 1, 'Auto'); --Blue Convertible
+('Sklyer', 'White', '1972-01-29', 'sklyerwhite@example.com', '7165558123', '123 Elm St', 'Buffalo', 'NY', '14201', 4722251765, 1, 1, 0, NULL), --Client_ID = 1, etc.
+('Walter', 'White', '1995-07-10', 'walterwhite@example.com', '7165552244', '456 Maple Rd', 'Buffalo', 'NY', '14216', 7856933028, 1, 0, 1, 'Auto'),
+('Jesse', 'Pinkman', '1988-05-11', 'jessepinkman@example.com', '5855559988', '89 Hilltop Dr', 'Rochester', 'NY', '14607', 5056488294, 1, 1, 1, 'Mortgage'),
+('Saul', 'Goodman', '1964-05-03', 'saulgoodman@example.com', '5055437363', '17 Main St', 'Rochester', 'NY', '14607', 3053604818, 1, 0, 1, 'Boat'),
+('Hank', 'Schrader', '1983-11-05', 'hankschrader@example.com', '4724473771', '982 Second St', 'Rochester', 'NY', '14607', 3054630597, 1, 1, 1, 'Business'),
+('Mike', 'Ehrmantraut', '1958-01-13', 'mikeehrmantraut@example.com', '3052077482', '4133 Browning Lane', 'Johnson City', 'NY', '13790', 9833010648, 1, 0, 1, 'Student'),
+('Gustavo', 'Fring', '1962-07-01', 'gustavofring@example.com', '5057047994', '819 Browning Ln', 'Guilford', 'NY', '13780', 5056460665, 1, 1, 1, 'Payday'),
+('Huell', 'Babineaux', '1985-10-04', 'huellbabineaux@example.com', '4722198666', '1227 Godfrey Rd', 'New York', 'NY', '10019', 9837104906, 1, 1, 1, 'Personal'),
+('Gale', 'Boetticher', '1990-10-11', 'galeboetticher@example.com', '4847932203', '4477 Elm Dr', 'New York', 'NY', '10011', 4724600742, 1, 1, 1, 'HELOC'),
+('Tuco', 'Salamanca', '1970-07-04', 'tucosalamanca@example.com', '3053837127', '3289 Fieldcrest Rd', 'Brentwood', 'NY', '11717', 6319526687, 1, 1, 1, 'Auto'); --Blue Convertible
 
 
 INSERT INTO Account (Client_ID, Branch_ID, Account_Type, Balance, Open_Date)
@@ -79,11 +79,11 @@ VALUES
 
 INSERT INTO User_Login (Username, Password_Hash, Role, Client_ID, Employee_ID)
 VALUES
-('aaronb', 'hash123', 'Client', 1, NULL),
-('emmaw', 'hash456', 'Client', 2, NULL),
-('davidk', 'hash789', 'Client', 3, NULL),
-('susanm', 'hash999', 'Employee', NULL, 1),
-('jamesb', 'hash222', 'Employee', NULL, 2);
+('skylerw', 'hash123', 'Client', 1, NULL),
+('walterw', 'hash456', 'Client', 2, NULL),
+('jessep', 'hash789', 'Client', 3, NULL),
+('saulg', 'hash999', 'Employee', NULL, 1),
+('hanks', 'hash222', 'Employee', NULL, 2);
 
 
 INSERT INTO Logs (User_ID, Action, Details)
@@ -92,5 +92,6 @@ VALUES
 (1, 'Transfer', 'Transferred $100 from Checking to Savings'),
 (2, 'Loan Payment', 'Auto loan payment processed'),
 (4, 'Approval', 'Approved new savings account for client 3');
+
 
 
