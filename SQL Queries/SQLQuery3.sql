@@ -1,7 +1,7 @@
 -- CSIT 455- Relational/Object Databases
 -- Dr. Shahin Mehdipour Ataee
 -- Term Project- Bank Database
--- Aaron Burkett & Ryan P
+-- Aaron Burkett & Ryan Pontonio
 -- 10/29/2025
 
 -- Database Table Testing Queries
@@ -23,3 +23,4 @@ SELECT L.Loan_ID, C.First_Name, L.Loan_Type, L.Amount, P.Payment_Date, P.Amount 
 FROM Loan L
 JOIN Client C ON L.Client_ID = C.Client_ID
 LEFT JOIN Loan_Payment P ON L.Loan_ID = P.Loan_ID;
+
