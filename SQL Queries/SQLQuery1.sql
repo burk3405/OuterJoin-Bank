@@ -49,7 +49,7 @@ create table Client (
 
 
 create table Account (
-	Account_ID int identity(1,1) primary key, -- This denotes the unique ID of the account, which appears on the clients credit cards, website, etc.
+	Account_ID int identity(1,1) primary key,
 	Client_ID int not null,
 	Branch_ID int not null,
 	Account_Type varchar(20) check (Account_Type in ('Checking', 'Savings', 'Credit', 'Business', 'Charge')),
@@ -109,6 +109,7 @@ create table Logs (
 	Details varchar(255),
 	foreign key (User_ID) references User_Login(User_ID)
 );
+
 
 
 
