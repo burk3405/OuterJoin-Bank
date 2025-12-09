@@ -41,7 +41,6 @@ create table Client (
 	Zip_Code varchar(10),
 	Registration_Date date default getdate(),
 	State_License_No numeric(10,0),
-	--optional:
 	hasChecking bit default 0,
 	hasSavings bit default 0,
 	hasLoan bit default 0,
@@ -110,5 +109,6 @@ create table Logs (
 	Details varchar(255),
 	foreign key (User_ID) references User_Login(User_ID)
 );
+
 
 
