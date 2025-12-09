@@ -76,7 +76,7 @@ create table Transactions(
 	Transaction_ID int identity(1,1) primary key,
 	Account_ID int not null,
 	Transaction_Type varchar(20) check (Transaction_Type in ('Deposit', 'Withdrawal', 'Transfer', 'Payment', 'Wire', 'Closure', 'Default')),
-	Account decimal(15,2) not null,
+	Amount decimal(15,2) not null,
 	Transaction_Date datetime default getdate(),
 	Description varchar(255),
 	foreign key (Account_ID) references Account(Account_ID)
@@ -109,6 +109,7 @@ create table Logs (
 	Details varchar(255),
 	foreign key (User_ID) references User_Login(User_ID)
 );
+
 
 
 
