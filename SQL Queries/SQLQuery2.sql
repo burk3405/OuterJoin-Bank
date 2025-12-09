@@ -43,7 +43,7 @@ VALUES
 ('Gustavo', 'Fring', '1962-07-01', 'gustavofring@example.com', '5057047994', '819 Browning Ln', 'Guilford', 'NY', '13780', 5056460665, 1, 1, 1, 'Payday'),
 ('Huell', 'Babineaux', '1985-10-04', 'huellbabineaux@example.com', '4722198666', '1227 Godfrey Rd', 'New York', 'NY', '10019', 9837104906, 1, 1, 1, 'Personal'),
 ('Gale', 'Boetticher', '1990-10-11', 'galeboetticher@example.com', '4847932203', '4477 Elm Dr', 'New York', 'NY', '10011', 4724600742, 1, 1, 1, 'HELOC'),
-('Tuco', 'Salamanca', '1970-07-04', 'tucosalamanca@example.com', '3053837127', '3289 Fieldcrest Rd', 'Brentwood', 'NY', '11717', 6319526687, 1, 1, 1, 'Auto'); --Blue Convertible
+('Tuco', 'Salamanca', '1970-07-04', 'tucosalamanca@example.com', '3053837127', '3289 Fieldcrest Rd', 'Brentwood', 'NY', '11717', 6319526687, 1, 1, 1, 'Auto');
 
 
 INSERT INTO Account (Client_ID, Branch_ID, Account_Type, Balance, Open_Date)
@@ -92,6 +92,7 @@ VALUES
 (1, 'Transfer', 'Transferred $100 from Checking to Savings'),
 (2, 'Loan Payment', 'Auto loan payment processed'),
 (4, 'Approval', 'Approved new savings account for client 3');
+
 
 
 
