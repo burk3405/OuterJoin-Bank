@@ -24,5 +24,20 @@ FROM Loan L
 JOIN Client C ON L.Client_ID = C.Client_ID
 LEFT JOIN Loan_Payment P ON L.Loan_ID = P.Loan_ID;
 
+-- Find the average salary for all employees 
+SELECT AVG(Salary) Avg_Salary 
+FROM Employee; 
 
+-- Total balance of all savings accounts 
+SELECT SUM(Balance) Total_Savings 
+FROM Account 
+WHERE Account_Type = 'Savings';  
 
+-- List all clients who have both a checking and savings account 
+
+SELECT DISTINCT C.Client_ID, C.First_Name, C.Last_name  
+FROM Client C  
+JOIN Account A1 ON C.Client_ID = A1.Client_ID AND A1.Account_Type = 'Checking' 
+JOIN Account A2 ON C.Client_ID = A2.Client_ID AND A2.Account_Type = 'Savings'; 
+
+-- 
