@@ -59,7 +59,7 @@ UPDATE Employee
 SET Salary = Salary * 1.03 
 WHERE Salary > 65000; 
 
--- Create a procedure that gets employees with login accounts 
+-- Create a procedure that gets employees with login accounts, ordered by salary
 
 CREATE PROCEDURE EmployeesWithLogin 
 AS SELECT E.Employee_ID, E.First_Name, E.Last_Name, E.Salary 
@@ -68,3 +68,4 @@ JOIN User_Login U ON E.Employee_ID = U.Employee_ID
 ORDER BY E.Salary DESC; 
 
 EXEC EmployeesWithLogin 
+
